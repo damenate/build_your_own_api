@@ -1,6 +1,6 @@
 class Giphy
-def initialize(gif)
-  @gif = gif
+def initialize(zip)
+  @zip = zip
   @response = get_response
 end
 
@@ -10,9 +10,8 @@ private def get_response
 end
 
 # private def get_response
-#   key = ENV['WUNDERGROUND_KEY']
-#   HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/SC/#{@zip}.json")
-#   end
+#   HTTParty.get(http://api.giphy.com/v1/gifs/search?q=#{condition}&api_key=dc6zaTOxFJmzC)
+# end
 
 def condition_gif
   @response["data"].sample["images"]["fixed_height"]["url"]

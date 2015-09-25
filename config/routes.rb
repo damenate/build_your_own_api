@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'condition_gifs/index'
+
+  get 'condition_gifs/show'
+
   get 'giphys/index'
   get 'giphys/show'
   get 'current_conditions/index'
   get 'current_conditions/show'
-  get 'api/v1/current_conditions' => 'current_conditions#show'
+  #get 'api/v1/sweetgifs' => 'current_conditions#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
