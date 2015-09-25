@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  get 'rain/index'
-  get 'rain/show'
+  get 'giphys/index'
+  get 'giphys/show'
+  get 'current_conditions/index'
+  get 'current_conditions/show'
+  get 'api/v1/current_conditions' => 'current_conditions#show'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

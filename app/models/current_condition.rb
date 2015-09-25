@@ -1,4 +1,4 @@
-class Rain
+class CurrentCondition
   def initialize(zip)
     @zip = zip
     @response = get_response
@@ -6,7 +6,6 @@ class Rain
 
   private def get_response
     file = File.join(Rails.root, 'test','models','json_weather','rain_weather.json')
-
     JSON.parse(File.read(file))
   end
 
@@ -16,7 +15,6 @@ class Rain
   #   end
 
   def condition
-    
     @response["current_observation"]["weather"]
   end
 end

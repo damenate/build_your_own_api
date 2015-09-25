@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RainControllerTest < ActionController::TestCase
+class CurrentConditionsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success

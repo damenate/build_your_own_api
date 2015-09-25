@@ -8,10 +8,10 @@ require 'test_helper'
 #   end
 # end
 
-class RainModelTest < ActiveSupport::TestCase
+class CurrentConditionModelTest < ActiveSupport::TestCase
 
   def test_condition_at_location
-    assert_equal "Rain", Rain.new("29115").condition
+    assert_equal "Rain", CurrentCondition.new("29115").condition
   end
 
 end
