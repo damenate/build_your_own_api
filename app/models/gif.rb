@@ -10,19 +10,20 @@ class Gif
 
   private def get_response
     forecast = CurrentCondition.new(@zip).condition
+    giphy = HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
 
     if forecast.match(/(rain)/i)
-      HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
+      giphy
     elsif forecast.match(/(overcast)/i)
-      HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
+      giphy
     elsif forecast.match(/(sun)/i)
-      HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
+      giphy
     elsif forecast.match(/(partly)/i)
-      HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
+      giphy
     elsif forecast.match(/(cloud)/i)
-      HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
+      giphy
     elsif forecast.match(/(thunderstorm)/i)
-      HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
+      giphy
     else
       HTTParty.get("http://api.giphy.com/v1/gifs/search?q=baby-confused-idk&api_key=dc6zaTOxFJmzC")
     end
