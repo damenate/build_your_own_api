@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'condition_gifs/index'
   get 'condition_gifs/show'
-  get 'rain_gifs/index'
-  get 'rain_gifs/show'
+  get 'gifs/index'
+  get 'gifs/show'
   get 'current_conditions/index'
   get 'current_conditions/show'
   #get 'api/v1/sweetgifs' => 'current_conditions#show'

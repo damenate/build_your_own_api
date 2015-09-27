@@ -12,7 +12,7 @@ class CurrentCondition
 
   private def get_response
     key = ENV['WUNDERGROUND_KEY']
-    HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/SC/#{@zip}.json")
+    HTTParty.get("http://api.wunderground.com/api/#{key}/conditions/q/#{@zip}.json")
     end
 
   def condition
