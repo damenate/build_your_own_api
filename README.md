@@ -6,8 +6,8 @@ This rails app is designed to take in a zip code and give you a random give rela
 # The code
 Below is the code in our gif.rb file. Here we pull from the current_conditions.rb file and depending on the current forecast a gif from giphy.com will be pulled up.  
 
-```
-private def get_response
+
+```private def get_response
   forecast = CurrentCondition.new(@zip).condition
   giphy = HTTParty.get("http://api.giphy.com/v1/gifs/search?q={#{forecast}}&api_key=dc6zaTOxFJmzC")
 
@@ -29,8 +29,8 @@ private def get_response
 end
 ```
 We then generated what was needed in the browser using our GifsController class with the show action.
-```
-class GifsController < ApplicationController
+
+```class GifsController < ApplicationController
   def index
     render json: Gif.new(params[:zip]).condition_gif
   end
