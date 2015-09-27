@@ -7,8 +7,9 @@ class ConditionGif
   end
 
   def combo
-    forecast = CurrentCondition.new("zip").condition
+    forecast = CurrentCondition.new(params[:zip]).condition
     rain_gif = RainGif.new("zip").condition_gif
+    idk_gif = IdkGif.new("zip").condition_gif
     # sun_gif = SunGif.new("zip").condition_gif
     # idk_gif = IdkGif.new("zip").condition_gif
     case
@@ -16,7 +17,8 @@ class ConditionGif
       return rain_gif
     # when forecast.match(/(sun)/i)
     #   return sun_gif
-    # else idk_gif
+      else idk_gif
     end
+    idk_gif
   end
 end

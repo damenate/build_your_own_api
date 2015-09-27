@@ -1,6 +1,6 @@
 class CurrentConditionsController < ApplicationController
   def index
-    render json: CurrentCondition.new("1231234").condition
+    render json: CurrentCondition.new(params[:zip]).condition
   end
 
   def show
