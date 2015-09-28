@@ -11,7 +11,7 @@ require 'test_helper'
 class CurrentConditionModelTest < ActiveSupport::TestCase
 
   def test_condition_at_location
-    assert_equal "Rain", CurrentCondition.new("29115").condition
+    assert_equal "Overcast", CurrentCondition.new("29115").condition
   end
 
 end

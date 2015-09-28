@@ -42,3 +42,8 @@ class GifsController < ApplicationController
   end
 end
 ```
+
+Below is the link that can take a zip code. 
+```
+http://localhost:3000/api/v1/sweetgifs?zip=
+```

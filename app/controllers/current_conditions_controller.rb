@@ -4,7 +4,7 @@ class CurrentConditionsController < ApplicationController
   end
 
   def show
-
+    render json: CurrentCondition.new(params[:zip]).condition
   end
 end
 
